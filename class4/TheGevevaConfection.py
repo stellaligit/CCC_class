@@ -1,9 +1,9 @@
-n = int(input())
+t = int(input())
 
-for i in range(n):
-    t = int(input())
+for i in range(t):
+    n = int(input())
     a = []
-    for j in range(t):
+    for j in range(n):
         k = int(input())
         a.append(k)
 
@@ -11,9 +11,9 @@ for i in range(n):
     lake = []
     branch = []
 
-    succsess = True
+    success = True
 
-    for i in range(len(a)):
+    while expect <= n:
         if expect in branch:
             if expect == branch[len(branch)-1]:
                 lake.append(expect)
@@ -21,7 +21,7 @@ for i in range(n):
                 expect = expect + 1
                 continue
             else:
-                succsess = False
+                success = False
                 print("N")
                 break
         else:
@@ -35,5 +35,5 @@ for i in range(n):
                 del a[len(a)-1]
                 continue
     
-    if succsess:
+    if success:
         print("Y")
