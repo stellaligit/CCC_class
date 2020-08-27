@@ -20,6 +20,8 @@ count = 0
 for i in range(x - 1, -1, -1):
     if a[i] == b:
         count = count + 1
+    else:
+        break
 
 person[b].sort()
 print(person[b][count])
