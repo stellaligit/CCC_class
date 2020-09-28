@@ -1,4 +1,3 @@
-# this is not for contest marks. I'm doing this to see if I'm right.
 s = input()
 t = input()
 
@@ -26,7 +25,7 @@ for i in range(len(a)):
                 a[j] = x
             elif a[j] == x:
                 a[j] = y
-       
+
 if flag:
     print("Yes")
 else:
