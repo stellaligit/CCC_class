@@ -21,7 +21,6 @@ def printBlock(line):
 printBlock(icon)
 '''
 
-
 def printBlock(line):
     for i in range(k):
         for j in range(k):
