@@ -14,4 +14,4 @@ if cats > dogs:
 elif cats < dogs:
     print("dogs")
 else:
-    print("equal")
+    print("equal"
