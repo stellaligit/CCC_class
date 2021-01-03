@@ -9,7 +9,7 @@ while True:
     # determining x
     test = position[0] + x
     if 0 < test <= c:
-        position[0] = test
+        position[0] =
     elif test > c:
         position[0] = c
     else:
