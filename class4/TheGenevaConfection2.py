@@ -28,7 +28,7 @@ for i in range(t):
             expect = expect + 1
         else:
             break
-    
+
     if expect == n + 1:
         print("Y")
     else:
