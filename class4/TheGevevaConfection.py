@@ -34,6 +34,6 @@ for i in range(t):
                 branch.append(a[len(a)-1])
                 del a[len(a)-1]
                 continue
-    
+
     if success:
         print("Y")
