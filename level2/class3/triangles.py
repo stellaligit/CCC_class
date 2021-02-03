@@ -11,12 +11,13 @@ for i in range(len(a)):
     max_y = 0
     for j in a:
         if j[0] == a[i][0]:
-            if abs(j[1] - a[i][1]) > max_y:
-                max_y = abs(j[1] - a[i][1])
-    for j in a:
+            p = abs(j[1] - a[i][1])
+            if p > max_y:
+                max_y = p
         if j[1] == a[i][1]:
-            if abs(j[0] - a[i][0]) > max_x:
-                max_x = abs(j[0] - a[i][0])
+            q = abs(j[0] - a[i][0])
+            if q > max_x:
+                max_x = q
     
     if max_x * max_y > max_area:
         max_area = max_x * max_y
