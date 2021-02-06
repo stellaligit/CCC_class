@@ -18,8 +18,6 @@ if even == odd:
     print(num)
 elif even > odd:
     print(num + 1)
-elif even + 1 == odd:
-    print(num - 1)
 else:
     x = odd - even
     if x % 3 == 0:
