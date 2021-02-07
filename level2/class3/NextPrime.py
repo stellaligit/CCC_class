@@ -1,7 +1,7 @@
 import math
 n = int(input())
 
-if n == 0 or n == 1:
+if n <= 2:
     print(2)
 else:
     def isPrime(x):
