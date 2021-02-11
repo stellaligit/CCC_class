@@ -1,24 +1,17 @@
 for i in range(5):
     n = int(input())
-    
-    a = 2
-    count = 0
-    flag = True
 
-    while True:
+    count = 0
+    for j in range(2, n//2 + 1):
         dividable = False
-        while n % a == 0:
-            n = n // a
+        while n % j == 0:
+            n = n // j
             dividable = True
         
         if dividable:
             count += 1
-        if count > 3:
-            flag = False
-            break
-        a += 1
 
-    if flag:
+    if count == 3:
         print("valid")
     else:
         print("not")
