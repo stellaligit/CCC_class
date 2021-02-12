@@ -3,6 +3,9 @@ for i in range(5):
 
     count = 0
     for j in range(2, n//2 + 1):
+        if n == 1:
+            break
+        
         dividable = False
         while n % j == 0:
             n = n // j
