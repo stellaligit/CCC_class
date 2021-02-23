@@ -11,31 +11,34 @@ for i in range(len(s)):
     else:
         S_count += 1
 
-organized = str(L_count * "L") + str(M_count * "M") + str(S_count * "S")
+expect = str(L_count * "L") + str(M_count * "M") + str(S_count * "S")
 
-if s == organized:
+if expect == s:
     print("0")
 else:
-    bad = []
-    good = []
-    for i in range(len(s)):
-        if s[i] != organized[i]:
-            bad.append(s[i])
-            good.append(organized[i])
-    
-    count = 0
-    pos = 0
-    replace = 0
-    recent = bad[0]
-    for i in range(len(bad) - 1):
-        for j in range(len(good)):
-            if good[i] == recent:
-                pos = i
-                replace = good[i]
-                good[i] = bad[pos]
-                bad[pos] = replace
-                count += 1
-            else:
-                
-    
-    print(count + 1)
+    ans = 0
+    L_count2 = 0
+    M_count2 = 0
+    L_count3 = 0
+    M_count3 = 0
+
+    for i in range(L_count):
+        if s[i] == "L":
+            L_count2 += 1
+        elif s[i] == "M":
+            M_count3 += 1
+
+    for i in range(L_count, L_count + M_count):
+        if s[i] == "M":
+            M_count2 += 1
+        elif s[i] == "L":
+            L_count3 += 1
+
+    ans = L_count - L_count2 + M_count - M_count2
+
+    if L_count3 > M_count3:
+        ans -= M_count3
+        print(ans)
+    else:
+        ans -= L_count3
+        print(ans)
