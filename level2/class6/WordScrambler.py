@@ -1,7 +1,18 @@
-s = input().split()
+s = [char for char in input()]
 
 def word_scrambler(arr):
     if len(arr) == 1:
-        return arr[0]
+        return [arr[0]]
+    else:
+        final_result = []
+        for ch in arr:
+            arr_2 = arr.copy()
+            arr_2.remove(ch)
+            partial_result = [ch + x for x in word_scrambler(arr_2)]
+            final_result.extend(partial_result)
+        return final_result
 
-print(word_scrambler(s))
+ans = word_scrambler(s)
+ans.sort()
+for s in ans:
+    print(s)
