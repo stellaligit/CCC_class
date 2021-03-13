@@ -1,4 +1,5 @@
 s = [char for char in input()]
+s.sort()
 
 def word_scrambler(arr):
     if len(arr) == 1:
@@ -13,6 +14,5 @@ def word_scrambler(arr):
         return final_result
 
 ans = word_scrambler(s)
-ans.sort()
 for s in ans:
     print(s)
