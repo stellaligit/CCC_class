@@ -16,4 +16,11 @@ for _ in range(int(input())):
         if year == s[4]:
             age += 12
     else:
-        pass
+        while zodiac[id] != s[4]:
+            id, age = id+1, age-1
+            if id >= 12:
+                id -= 12
+        if year == s[4]:
+            age -= 12
+    cow[s[0]] = (s[4], age)
+print(abs(cow['Bessie'][1] - cow['Elsie'][1]))
