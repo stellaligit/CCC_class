@@ -16,12 +16,11 @@ elif n == 2:
 else:
     count = 2
     sum = stack[0] + stack[1]
-    while True:
-        for i in stack:
-            if sum <= i:
-                count += 1
-                sum += i
-        if sum > stack[-1]:
-            break
+    for i in stack:
+        if sum <= i:
+            count += 1
+            sum += i
+            if sum > stack[-1]:
+                break
 
     print(count)
