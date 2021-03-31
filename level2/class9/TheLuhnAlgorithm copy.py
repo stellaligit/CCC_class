@@ -12,3 +12,11 @@ for i in range(5):
                 sum += k % 10 + 1
             else:
                 sum += k
+            j = j // 10
+            flag = not flag
+        if sum % 10 == 0:
+            ans.append(0)
+        else:
+            check_digit = 10 - (sum % 10)
+            ans.append(check_digit)
+    print(*ans, sep="")
