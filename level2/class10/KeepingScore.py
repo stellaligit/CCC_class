@@ -27,83 +27,32 @@ for i in s:
     elif curr == "S":
         spades.append(i)
 
-club_sum = 0
-diamond_sum = 0
-heart_sum = 0
-spade_sum = 0
+def points(arr):
+    len_arr = len(arr)
+    arr_sum = 0
+    if len_arr == 0:
+        arr_sum = 3
+    elif len_arr == 1:
+        arr_sum = 2
+    elif len_arr == 2:
+        arr_sum = 1
+    
+    for i in arr:
+        if i == "A":
+            arr_sum += 4
+        elif i == "K":
+            arr_sum += 3
+        elif i == "Q":
+            arr_sum += 2
+        elif i == "J":
+            arr_sum += 1
+    
+    return arr_sum
 
-len_clubs = len(clubs)
-len_diamonds = len(diamonds)
-len_hearts = len(hearts)
-len_spades = len(spades)
-
-if len_clubs == 0:
-    club_sum = 3
-elif len_clubs == 1:
-    club_sum = 2
-elif len_clubs == 2:
-    club_sum = 1
-
-if len_diamonds == 0:
-    diamond_sum = 3
-elif len_diamonds == 1:
-    diamond_sum = 2
-elif len_diamonds == 2:
-    diamond_sum = 1
-
-if len_hearts == 0:
-    heart_sum = 3
-elif len_hearts == 1:
-    heart_sum = 2
-elif len_hearts == 2:
-    heart_sum = 1
-
-if len_spades == 0:
-    spade_sum = 3
-elif len_spades == 1:
-    spade_sum = 2
-elif len_spades == 2:
-    spade_sum = 1
-
-for i in clubs:
-    if i == "A":
-        club_sum += 4
-    elif i == "K":
-        club_sum += 3
-    elif i == "Q":
-        club_sum += 2
-    elif i == "J":
-        club_sum += 1
-
-for i in diamonds:
-    if i == "A":
-        diamond_sum += 4
-    elif i == "K":
-        diamond_sum += 3
-    elif i == "Q":
-        diamond_sum += 2
-    elif i == "J":
-        diamond_sum += 1
-
-for i in hearts:
-    if i == "A":
-        heart_sum += 4
-    elif i == "K":
-        heart_sum += 3
-    elif i == "Q":
-        heart_sum += 2
-    elif i == "J":
-        heart_sum += 1
-
-for i in spades:
-    if i == "A":
-        spade_sum += 4
-    elif i == "K":
-        spade_sum += 3
-    elif i == "Q":
-        spade_sum += 2
-    elif i == "J":
-        spade_sum += 1
+club_sum = points(clubs)
+diamond_sum = points(diamonds)
+heart_sum = points(hearts)
+spade_sum = points(spades)
 
 total_sum = club_sum + diamond_sum + heart_sum + spade_sum
 
