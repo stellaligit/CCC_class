@@ -6,36 +6,22 @@ spades = []
 curr = ""
 
 for i in s:
-    if i == "C":
-        curr = "C"
-        continue
-    elif i == "D":
-        curr = "D"
-        continue
-    elif i == "H":
-        curr = "H"
-        continue
-    elif i == "S":
-        curr = "S"
-        continue
-    if curr == "C":
-        clubs.append(i)
-    elif curr == "D":
-        diamonds.append(i)
-    elif curr == "H":
-        hearts.append(i)
-    elif curr == "S":
-        spades.append(i)
+    if i in "CDHS":
+        curr = i
+    else:
+        if curr == "C":
+            clubs.append(i)
+        elif curr == "D":
+            diamonds.append(i)
+        elif curr == "H":
+            hearts.append(i)
+        elif curr == "S":
+            spades.append(i)
 
 def points(arr):
-    len_arr = len(arr)
     arr_sum = 0
-    if len_arr == 0:
-        arr_sum = 3
-    elif len_arr == 1:
-        arr_sum = 2
-    elif len_arr == 2:
-        arr_sum = 1
+    if len(arr) < 3:
+        arr_sum = 3 - len(arr)
     
     for i in arr:
         if i == "A":
