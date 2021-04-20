@@ -7,14 +7,10 @@ for i in range(n):
     arrive_time = leave_time + d - last_position
     mod = arrive_time % (r + g)
 
-    leave_time = arrive_time if mod >= r else leave_time += r - mod
-
-    '''
     wait_time = 0
     if mod < r:
         wait_time = r - mod
     leave_time = arrive_time + wait_time
-    '''
 
     last_position = d
 
