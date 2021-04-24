@@ -6,10 +6,10 @@ for i in range(n):
 
 def solution(a, i, k):
     x, y, s, d = a[i]
-    count_x = 0
-    count_y = 0
-    count_s = 0
-    count_d = 0
+    count_x = 1
+    count_y = 1
+    count_s = 1
+    count_d = 1
     for j in range(i):
         if a[j][0] == x:
             count_x += 1
@@ -27,5 +27,6 @@ def solution(a, i, k):
 for i in range(k - 1, n):
     if solution(a, i, k) == True:
         print(i + 1)
+        break
 else:
-    print(-1)
+    print("-1")
