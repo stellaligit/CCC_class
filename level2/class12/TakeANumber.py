@@ -11,12 +11,7 @@ while True:
     if s == "EOF":
         break
 
-    if s == "TAKE":
-        if n == 999:
-            n = 1
-        else:
-            n += 1
-        
+    if s == "TAKE":        
         num_of_takes += 1
         total_num_of_takes += 1
     elif s == "SERVE":
