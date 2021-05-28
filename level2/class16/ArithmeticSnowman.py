@@ -12,6 +12,7 @@ for i in range(1, len(snowmen) - 1):
         if a + difference in snowmen:
             if 3 * a > biggest:
                 biggest = 3 * a
-                break
+                # print(b, a, a + difference, biggest)
+            break
 
 print(biggest)
