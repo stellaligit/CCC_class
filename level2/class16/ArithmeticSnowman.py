@@ -9,7 +9,7 @@ for i in range(1, len(snowmen) - 1):
     for j in range(i):
         b = snowmen[j]
         difference = a - b
-        if a + difference in snowmen:
+        if a + difference in snowmen[i + 1:]:
             if 3 * a > biggest:
                 biggest = 3 * a
                 # print(b, a, a + difference, biggest)
