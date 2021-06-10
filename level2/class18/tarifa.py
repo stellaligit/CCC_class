@@ -6,4 +6,4 @@ for i in range(n):
     p = int(input())
     sum += p
 
-print(x * n - sum + x)
+print(x * (n - 1) - sum)
